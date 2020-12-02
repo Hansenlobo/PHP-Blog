@@ -26,11 +26,13 @@
                                 <label for='username'><i class='fa fa-fw fa-user'></i>Username:</label>
                                 <input name='username' type='text' class='form-control' placeholder='Enter Username'>
                                 </div>
+                                <br>
                                 <div class='input-group'>
                                 <label for='password'><i class='fa fa-fw fa-key'></i>Password:</label>
                                 <input name='password' type='text' class='form-control' placeholder='Enter Password'>
                                 </div>
                                 <div class='input-group'>
+                                    <br>
                                 <button name='login' class='btn btn-default' type='submit'>Login</button>
                                 </div>
                                 </form>
@@ -58,7 +60,7 @@
 			<!-- /.row -->
 		</div>
 		<!-- Blog Categories Well -->
-		<div class="well">
+		<!-- <div class="well">
 			<h4>Recent Comments</h4>
 			<div class="row">
 				<div class="col-lg-6">
@@ -78,10 +80,10 @@
                     ?>
 					</ul>
 				</div>
-				<!-- /.col-lg-6 -->
+				/.col-lg-6
 			</div>
-			<!-- /.row -->
-		</div>
+			/.row
+		</div> -->
 		<!-- Blog Categories Well -->
 		<div class="well">
 			<h4>Blog Categories</h4>
@@ -104,5 +106,9 @@
 			<!-- /.row -->
 		</div>
 		<!-- Side Widget Well -->
-		<?php include "includes/widget.php"; ?>
+<?php 
+// include "includes/widget.php"; 
+?>
+
+
 </div>
