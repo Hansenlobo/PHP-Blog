@@ -9,11 +9,8 @@ session_start();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" conten="Blog CMS">
-    <meta name="author" content="Abiruzzaman Molla">
-    <meta name="keywords" content="HTML, CSS, XML, JavaScript">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CMS - Simple Blog by Abir</title>
+    <title>CMS - Simple Blog</title>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
