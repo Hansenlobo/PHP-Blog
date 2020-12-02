@@ -84,7 +84,7 @@
                         }
                     }
                     ?>
-                <li class='<?php echo $contact_class; ?>'><a href='contact.php'>Contect Us</a></li>
+                <li class='<?php echo $contact_class; ?>'><a href='contact.php'>Contact Us</a></li>
             </ul>
             <form class="navbar-form navbar-right" action="search.php" method="post">
                     <div class="input-group">

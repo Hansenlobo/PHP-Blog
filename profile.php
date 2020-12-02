@@ -75,7 +75,7 @@
                                  ?>
 									</div>
 									<div class="col-sm-7">
-										<div class="row">
+										<!-- <div class="row">
 											<div class="col-sm-9">
 												<div class="panel panel-default text-left">
 													<div class="panel-body">
@@ -91,7 +91,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
+										</div> -->
 										<table class="table table-striped table-bordered table-hover">
 											<tbody>
 												<tr>
@@ -118,7 +118,7 @@
 													</td>
 												</tr>
 												<tr>
-													<td class="text-left" width="20%"> <b>Gander</b> </td>
+													<td class="text-left" width="20%"> <b>Gender</b> </td>
 													<td class="text-left" width="1%"> <b>:</b> </td>
 													<td class="text-left" width="80%">
 														<p>
@@ -132,10 +132,10 @@
 											<tbody>
 												<tr>
 													<div class="row">
-														<div class="well"> <b>Contect Information</b> </div>
+														<div class="well"> <b>Contact Information</b> </div>
 													</div>
 												</tr>
-												<tr>
+												<!-- <tr>
 													<td class="text-left" width="19%"> <b>Mobile</b> </td>
 													<td class="text-left" width="1%"> <b>:</b> </td>
 													<td class="text-left" width="80%">
@@ -145,7 +145,7 @@
 															</a>
 														</p>
 													</td>
-												</tr>
+												</tr> -->
 												<tr>
 													<td class="text-left" width="20%"> <b>Email</b> </td>
 													<td class="text-left" width="1%"> <b>:</b> </td>
@@ -157,7 +157,7 @@
 														</p>
 													</td>
 												</tr>
-												<tr>
+												<!-- <tr>
 													<td class="text-left" width="20%"> <b>City</b> </td>
 													<td class="text-left" width="1%"> <b>:</b> </td>
 													<td class="text-left" width="80%">
@@ -165,8 +165,8 @@
 															<?php echo $user_city; ?>
 														</p>
 													</td>
-												</tr>
-												<tr>
+												</tr> -->
+												<!-- <tr>
 													<td class="text-left" width="20%"> <b>Country</b> </td>
 													<td class="text-left" width="1%"> <b>:</b> </td>
 													<td class="text-left" width="80%">
@@ -174,10 +174,10 @@
 															<?php echo $user_country; ?>
 														</p>
 													</td>
-												</tr>
+												</tr> -->
 											</tbody>
 										</table>
-										<table class="table table-striped table-bordered table-hover">
+										<!-- <table class="table table-striped table-bordered table-hover">
 											<tbody>
 												<tr>
 													<div class="row">
@@ -190,9 +190,12 @@
 													</td>
 												</tr>
 											</tbody>
-										</table>
+										</table> -->
 									</div>
-									<div class="col-sm-2 well">
+
+
+									<!-- birthdayy -->
+									<!-- <div class="col-sm-2 well">
 										<div class="thumbnail">
 											<p>Birthday:</p> <img src="images/site_icon/birthday.jpg" alt="Paris" width="400" height="300">
 											<p><strong>Paris</strong></p>
@@ -214,7 +217,7 @@
                                 <p><a href='users/user_inbox.php?source=send_msg&user_id=$user_id' class='btn btn-success'>Send Message</a></p>
                             </div>";
                             }
-                            ?>
+                            ?> -->
 											<?php
                             if($user_twitter !== '' or $user_medium !== '' or $user_instagram !== '' or $user_facebook !== ''){
                                 echo "<div class='panel'>

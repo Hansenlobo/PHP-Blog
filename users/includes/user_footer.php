@@ -1,6 +1,7 @@
 </div>
 <footer class="container-fluid bg-4 text-center pull buttom">
-    <p>Bootstrap Theme Made By <a href="../index.php">Bootstrap</a></p>
+<a href="about_copyright.html">Copyright 2020</a>. All Rights Reserved.<br>
+ <a href="index.php">Home</a>.<br><br>
 </footer>
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
