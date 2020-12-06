@@ -47,7 +47,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     }
         if(empty($error)){
         register_user($username, $firstname, $lastname, $sex, $email, $password);
-        redirect("includes/login2.php");
+        //redirect("includes/login2.php");
         //login_user($username, $password);
         }
 

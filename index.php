@@ -31,7 +31,7 @@
             $find_count = mysqli_query($connection, $post_query_count);
             $count = mysqli_num_rows($find_count);
             if($count < 1){
-                echo "<center><div class='alert alert-info'><strong>Sorry!</strong> No post abilable.....</div></center>";
+                echo "<center><div class='alert alert-info'><strong>Sorry!</strong> No post available.....</div></center>";
             }
             else {
             $count = ceil($count / 5);

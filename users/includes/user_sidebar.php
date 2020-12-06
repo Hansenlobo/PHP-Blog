@@ -24,7 +24,12 @@ $count2 = mysqli_num_rows($select_ucomments_count);
                 <li> <a href="./change_password.php">Change Password</a> </li>
             </ul>
         </li>
-        <li> <a href="./add_post.php"><i class="fa fa-fw fa-comments"></i>Add Posts</a> </li>
+        <li> <a href="javascript:;" data-toggle="collapse" data-target="#view_dropdown"><i class="fa fa-fw fa-clipboard"></i> Posts <i class="fa fa-fw fa-caret-down"></i> </a>
+            <ul id="view_dropdown" class="collapse">
+                <li> <a href="./view_all_posts.php">View Post</a> </li>
+                <li> <a href="./add_post.php">Add Post</a> </li>
+            </ul>
+        </li>
         <!-- <li> <a href="view_comments.php"><i class="fa fa-fw fa-comments"></i>View Comments  <small class='pull-right'><span class='badge'> <?php echo $count2."/".$count; ?></span></small></a></li> -->
         <!-- <li> <a href="./user_settings.php"><i class="fa fa-fw fa-gear"></i>Settings</a> </li> -->
     </ul>

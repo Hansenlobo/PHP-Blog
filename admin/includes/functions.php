@@ -114,7 +114,7 @@ function register_user($username, $firstname, $lastname, $sex, $email, $password
         $query = "INSERT INTO users (username, user_firstname, user_lastname, user_sex, user_reg, user_email, user_password, user_role) VALUES('{$username}','{$firstname}','{$lastname}','{$sex}', '{$reg_date}', '{$email}', '{$password}', 'subscriber')";
         $registration_user_query = mysqli_query($connection, $query);
         confirmQuery($registration_user_query);
-    
+        redirect("./");
 
 }
 

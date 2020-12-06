@@ -7,7 +7,7 @@
 <div id="contact" class="container-fluid bg-grey">
     <?php
     if(isset($_POST['submit'])) {
-        $to         = "abiruzzaman.molla@gmail.com";
+        $to         = "hansen.17cs032@sode-edu.in";
         $subject    = wordwrap($_POST['subject'], 60);
         $body       = $_POST['body'];
         $header     = "From: " .$_POST['email'];
@@ -21,7 +21,7 @@
         $msg_body = $_POST['body'];
         $msg_body = mysqli_real_escape_string($connection, $msg_body);
         $msg_content = $msg_body;
-        date_default_timezone_set("Asia/Dhaka");
+        date_default_timezone_set("Asia/Calcutta");
         $msg_date = date('Y-m-d h:i:s A');
         $query = "INSERT INTO inbox(msg_status, msg_date, msg_author, msg_subject, author_email, msg_content) ";
         $query .= "VALUES('Panding','{$msg_date}','{$msg_author}','{$msg_subject}','{$author_email}','{$msg_content}') ";
@@ -35,13 +35,14 @@
     }
 ?>
         <h2 class="text-center">CONTACT</h2>
-        <div class="row">
+        <div class="row" style="padding-right:20px ;">
             <?php echo $message; ?>
             <div class="col-sm-5">
                 <p>Contact us and we'll get back to you within 24 hours.</p>
-                <p><span class="glyphicon glyphicon-map-marker"></span> Narshingdi, Dhaka</p>
-                <p><span class="glyphicon glyphicon-phone"></span> +880 1787350229</p>
-                <p><span class="glyphicon glyphicon-envelope"></span> abiruzzaman.molla@gmail.com</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> Karnataka, India</p>
+                <p><span class="glyphicon glyphicon-phone"></span> +91 8970349309</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> harikrishna.17cs033@sode-edu.in</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> hansen.17cs032@sode-edu.in</p>
             </div>
             <div class="col-sm-7 slideanim">
                 <div class="row">
@@ -56,7 +57,7 @@
                         <div class="row">
                             <div class="col-sm-12 form-group">
                                 <textarea class="form-control" id="comments" name="body" placeholder="Comment" rows="5" cols="4"></textarea>
-                                <button class="btn btn-default pull-right" type="submit" name="submit">Send</button>
+                                <br><button class="btn btn-default pull-right" type="submit" name="submit">Send</button>
                             </div>
                         </div>
                     </form>
