@@ -114,7 +114,7 @@ function register_user($username, $firstname, $lastname, $sex, $email, $password
         $query = "INSERT INTO users (username, user_firstname, user_lastname, user_sex, user_reg, user_email, user_password, user_role) VALUES('{$username}','{$firstname}','{$lastname}','{$sex}', '{$reg_date}', '{$email}', '{$password}', 'subscriber')";
         $registration_user_query = mysqli_query($connection, $query);
         confirmQuery($registration_user_query);
-
+    
 
 }
 
@@ -181,9 +181,9 @@ function login_user($username, $password){
 
         if($db_user_role == 'admin'){
             redirect("../admin");
-            } else {
-                redirect("../users");
-            }
+        } else {
+            redirect("../users");
+        }
 
     } else {
         redirect("../index.php?msg=Warrning&msg2=Username or Password you entered is wrong");
