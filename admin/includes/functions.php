@@ -108,7 +108,7 @@ function register_user($username, $firstname, $lastname, $sex, $email, $password
         $username = mysqli_real_escape_string($connection, $username);
         $email = mysqli_real_escape_string($connection, $email);
         $password = mysqli_real_escape_string($connection, $password);
-        date_default_timezone_set("Asia/Dhaka");
+        date_default_timezone_set("Asia/Calcutta");
         $reg_date = date('Y-m-d h:i:s A');
         $password = password_hash($password, PASSWORD_BCRYPT, array('cost'=>10));
         $query = "INSERT INTO users (username, user_firstname, user_lastname, user_sex, user_reg, user_email, user_password, user_role) VALUES('{$username}','{$firstname}','{$lastname}','{$sex}', '{$reg_date}', '{$email}', '{$password}', 'subscriber')";
