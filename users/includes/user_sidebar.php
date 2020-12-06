@@ -26,7 +26,7 @@ $count2 = mysqli_num_rows($select_ucomments_count);
         </li>
         <li> <a href="javascript:;" data-toggle="collapse" data-target="#view_dropdown"><i class="fa fa-fw fa-clipboard"></i> Posts <i class="fa fa-fw fa-caret-down"></i> </a>
             <ul id="view_dropdown" class="collapse">
-                <li> <a href="./view_all_posts.php">View Post</a> </li>
+                <li> <a href="./posts.php">View Post</a> </li>
                 <li> <a href="./add_post.php">Add Post</a> </li>
             </ul>
         </li>

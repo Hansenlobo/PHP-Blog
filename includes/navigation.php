@@ -9,7 +9,7 @@
                 <?php
 
                 
-                $query = "SELECT * FROM categories ORDER BY cat_id DESC LIMIT 5";
+                $query = "SELECT * FROM categories ORDER BY cat_id DESC LIMIT 3";
                 $select_all_categories_query = mysqli_query($connection,$query);
                     while($row = mysqli_fetch_assoc($select_all_categories_query)){
                         $cat_id = $row['cat_id'];

@@ -1,4 +1,8 @@
 <?php
+include "delete_popup.php";
+if(isset($_SESSION['username'])){
+    $s_username = $_SESSION['username'];
+}
 if(isset($_POST['checkBoxArray'])){
     foreach($_POST['checkBoxArray'] as $postId){
         $bulk_options = $_POST['bulk_options'];
@@ -17,7 +21,7 @@ if(isset($_POST['checkBoxArray'])){
                 $update_to_delete = mysqli_query($connection, $query);
                 break;
             case 'clone':
-                $query = "SELECT * FROM posts WHERE post_id = '{$postId}' ";
+                $query = "SELECT * FROM posts WHERE post_id = {$postId} ";
                 $select_post_by_id = mysqli_query($connection,$query);
                 while($row = mysqli_fetch_array($select_post_by_id)){
                 $post_title = $row['post_title'];
@@ -42,7 +46,8 @@ if(isset($_POST['checkBoxArray'])){
 
 ?>
     <?php
-
+// delete post function
+delete_post();
 
 if(isset($_GET['reset'])){
     $query = "UPDATE posts SET post_views_count = 0 WHERE post_id =" . mysqli_real_escape_string($connection, $_GET['reset']) ." ";
@@ -142,7 +147,7 @@ msg_show($msg, $msg2);
             $count = ceil($count / 5);
 
         // $query = "SELECT * FROM posts ORDER BY post_id DESC LIMIT $page_1,$per_page";
-        $query = "SELECT posts.post_id, posts.post_category_id, posts.post_title, posts.post_author, posts.post_date, posts.post_image, posts.post_content, posts.post_tags, posts.post_comment_count, posts.post_status, posts.post_views_count, categories.cat_id, categories.cat_title, categories.cat_image FROM posts LEFT JOIN categories ON posts.post_category_id = categories.cat_id ORDER BY posts.post_id DESC LIMIT $page_1,$per_page";
+        $query = "SELECT posts.post_id, posts.post_category_id, posts.post_title, posts.post_author, posts.post_date, posts.post_image, posts.post_content, posts.post_tags, posts.post_comment_count, posts.post_status, posts.post_views_count, categories.cat_id, categories.cat_title, categories.cat_image FROM posts LEFT JOIN categories ON posts.post_category_id = categories.cat_id where posts.post_author='$s_username' ORDER BY posts.post_id DESC LIMIT $page_1,$per_page";
 
         $select_post_by_id = mysqli_query($connection,$query);
         while($row = mysqli_fetch_assoc($select_post_by_id)){
