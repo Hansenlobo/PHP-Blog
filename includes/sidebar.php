@@ -13,7 +13,7 @@
                                     if(isset($_GET['msg'])){
                                         $msg = $_GET['msg'];
                                         $msg2 = $_GET['msg2'];
-                                        msg_show($msg, $msg2);
+                                        //msg_show($msg, $msg2);
                                     } else {
                                         $msg = '';
                                         $msg2 = '';
