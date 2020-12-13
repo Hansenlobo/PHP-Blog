@@ -29,7 +29,7 @@
                                 <br>
                                 <div class='input-group'>
                                 <label for='password'><i class='fa fa-fw fa-key'></i>Password:</label>
-                                <input name='password' type='text' class='form-control' placeholder='Enter Password'>
+                                <input name='password' type='password' class='form-control' placeholder='Enter Password'>
                                 </div>
                                 <div class='input-group'>
                                     <br>
@@ -45,7 +45,7 @@
 				<div class="col-lg-6">
 					<ul class="list-unstyled">
 						<?php
-                    $query = "SELECT * FROM posts WHERE post_status = 'publish' ORDER BY post_id DESC LIMIT 5";
+                    $query = "SELECT * FROM posts WHERE post_status = 'publish' order by 'post_id'";
                     $select_recent_posts_query = mysqli_query($connection,$query);
                     while($row = mysqli_fetch_assoc($select_recent_posts_query)){
                         $post_id = $row['post_id'];

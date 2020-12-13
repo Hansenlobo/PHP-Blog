@@ -75,7 +75,8 @@
                     <hr>
                     <p>
                         <?php echo $post_content; ?>
-                    </p> 
+                    </p> <a href="post.php?p_id=<?php echo $post_id; ?>">
+                            Read More </a>
                     <hr>
                     <?php } }
                       ?>

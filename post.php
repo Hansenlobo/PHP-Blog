@@ -74,27 +74,27 @@
                         $comment_content = $_POST['comment_content'];
                         $author_type = $_POST['author_type'];
 
-                        date_default_timezone_set("Asia/Dhaka");
+                        date_default_timezone_set("Asia/Calcutta");
                         $comment_date = date('D, F d, Y - h:i:s A');
 
                         if(!empty($comment_author) && !empty($comment_email) && !empty($comment_content) && $author_type == 'guest'){
-                            $query = "INSERT INTO comments (author_type, comment_post_id, comment_author, comment_email, comment_content, comment_status, comment_date) ";
-                            $query .= "VALUES('{$author_type}', $comment_post_id, '{$comment_author}', '{$comment_email}', '{$comment_content}', 'unapproved', '{$comment_date}')";
+                            $approve="unapprove";
+                            $query = "INSERT INTO comments (author_type, comment_post_id, comment_author, comment_email, comment_content, comment_status, comment_date) VALUES('{$author_type}', '{$comment_post_id}', '{$comment_author}', '{$comment_email}', '{$comment_content}', '{$approve}', '{$comment_date}')";
                             $comment_create_query = mysqli_query($connection, $query);
                                 if(!$comment_create_query){
-                                    die('Faild' . mysqli_error($connection));
+                                    die('Failed' . mysqli_error($connection));
                                 } else {
-                                    $message = "waiting for admin aproval.";
+                                    $message = "Comment added.";
                                 }
                         // Comment count updating query
                         $query = "UPDATE posts SET post_comment_count = post_comment_count+1 WHERE post_id = $comment_post_id ";
                         $update_comment_count = mysqli_query($connection, $query);
                         } elseif(!empty($comment_author) && !empty($comment_email) && !empty($comment_content) && $author_type == 'user'){
-                            $query = "INSERT INTO comments (author_type, comment_post_id, comment_author, comment_email, comment_content, comment_status, comment_date) ";
-                            $query .= "VALUES('{$author_type}', $comment_post_id, '{$comment_author}', '{$comment_email}', '{$comment_content}', 'approve', '{$comment_date}')";
+                            $approve="approve";
+                            $query = "INSERT INTO comments (author_type, comment_post_id, comment_author, comment_email, comment_content, comment_status, comment_date) VALUES('{$author_type}', $comment_post_id, '{$comment_author}', '{$comment_email}', '{$comment_content}','{$approve}', '{$comment_date}')";
                             $comment_create_query = mysqli_query($connection, $query);
                                 if(!$comment_create_query){
-                                    die('Faild' . mysqli_error($connection));
+                                    die('Failed' . mysqli_error($connection));
                                 } else {
                                     $message = "Thanks.";
                                 }
