@@ -111,8 +111,6 @@ while($row = mysqli_fetch_assoc($select_post_by_id)){
                             <?php
                             if($post_status == 'publish') {
                                 echo "<option value='draft'>Draft</option>";
-                            } else {
-                                echo "<option value='publish'>Publish</option>";
                             }
                             ?>
                         </select>

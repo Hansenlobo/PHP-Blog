@@ -4,7 +4,7 @@
 if(isset($_POST['submit'])){
     $comment_reply = $_POST['comment_reply'];
     $comment_id = $_POST['comment_id'];
-    date_default_timezone_set("Asia/Dhaka");
+    date_default_timezone_set("Asia/Calcutta");
     $comment_reply_date = date('D, F d, Y - h:i:s A');
 
     $query = "UPDATE comments SET ";
@@ -138,7 +138,7 @@ if(isset($_POST['submit'])){
 
             if($comment_status == 'approve'){
                 echo  "<td><a class='btn btn-warning' href='comments.php?unapprove={$comment_id}'>Unapprove</a></td>";
-            } elseif($comment_status == 'unapproved'){
+            } else{
                 echo  "<td><a class='btn btn-success' href='comments.php?approve={$comment_id}'>Approve</a></td>";
             }
             echo  "<td><a rel='$comment_id' class='btn btn-danger delete_link' href='javascript:void(0)'>Delete</a></td>";

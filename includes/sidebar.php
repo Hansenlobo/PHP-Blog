@@ -7,7 +7,7 @@
                             if($user_role == 'admin') {
                                 echo "<div class='well'><h4>Hi, $user_name</h4><br><li><a href='admin/index.php'>Admin Panel</a></li><li><a href='users'>Control Panel</a></li><li><a href='admin/users.php?source=change_password'>Change Password</a></li><br><center><a class='btn btn-danger' href='logout.php'>Logout</a></center></div>";
                             } else {
-                                echo "<div class='well'><h4>Hi, $user_name</h4><br><li><a href='../cms/users'>Control Panel</a></li><li><a href='change_password.php'>Change Password</a></li><br><center><a class='btn btn-danger' href='logout.php'>Logout</a></center></div>";
+                                echo "<div class='well'><h4>Hi, $user_name</h4><br><li><a href='users/index.php'>Control Panel</a></li><li><a href='change_password.php'>Change Password</a></li><br><center><a class='btn btn-danger' href='logout.php'>Logout</a></center></div>";
                             }
                            } else { //message request
                                     if(isset($_GET['msg'])){
@@ -45,7 +45,7 @@
 				<div class="col-lg-6">
 					<ul class="list-unstyled">
 						<?php
-                    $query = "SELECT * FROM posts WHERE post_status = 'publish' order by 'post_id'";
+                    $query = "SELECT * FROM posts WHERE post_status = 'publish' order by post_id desc LIMIT 10 ";
                     $select_recent_posts_query = mysqli_query($connection,$query);
                     while($row = mysqli_fetch_assoc($select_recent_posts_query)){
                         $post_id = $row['post_id'];

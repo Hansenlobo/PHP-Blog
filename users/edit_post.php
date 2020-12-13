@@ -13,7 +13,7 @@ while($row = mysqli_fetch_assoc($select_post_by_id)){
     $post_id = $row['post_id'];
     $post_title = $row['post_title'];
     $post_content = $row['post_content'];
-    $post_author = $row['post_author'];
+    $post_author = $s_username;
     $post_category_id = $row['post_category_id'];
     $post_status = $row['post_status'];
     $post_image = $row['post_image'];
@@ -24,9 +24,8 @@ while($row = mysqli_fetch_assoc($select_post_by_id)){
     if(isset($_POST['update_post'])){
         $post_title = $_POST['post_title'];
         $post_category_id = $_POST['post_category'];
-        $post_author = $s_username;
+        $post_author = $_POST['post_author'];
         $post_status = $_POST['post_status'];
-
         $post_image = $_FILES['image']['name'];
         $post_image_temp = $_FILES['image']['tmp_name'];
         move_uploaded_file($post_image_temp, "../images/post_pic/$post_image");

@@ -84,7 +84,6 @@
                                     <td>
                                         <select name="post_status" id="" class="form-control" >
                                                     <option value="draft">Draft</option>
-                                                    <option value="publish">Publish</option>
                                                 </select>
                                     </td>
                                 </tr>

@@ -35,7 +35,13 @@
             }
             else {
             $count = ceil($count / 5);
-            $query = "SELECT * FROM posts ORDER BY post_id DESC  LIMIT $page_1,$per_page";
+            if(isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin'){
+                $query = "SELECT * FROM posts ORDER BY post_id DESC  LIMIT $page_1,$per_page";
+            } else {
+                $query = "SELECT * FROM posts WHERE post_status = 'publish' ORDER BY post_id DESC  LIMIT $page_1,$per_page";
+            }
+            
+
             $select_all_posts_query = mysqli_query($connection,$query);
             while($row = mysqli_fetch_assoc($select_all_posts_query)){
                 $post_id = $row['post_id'];
